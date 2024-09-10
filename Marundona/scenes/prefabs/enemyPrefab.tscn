@@ -1,0 +1,188 @@
+[gd_scene load_steps=19 format=3 uid="uid://cqgltxycgqsec"]
+
+[ext_resource type="Script" path="res://scenes/scripts/enemyDemo.gd" id="1_75e0a"]
+[ext_resource type="Shader" path="res://resources/enemy.gdshader" id="2_58etg"]
+[ext_resource type="Texture2D" uid="uid://jg7fsit6ucpg" path="res://assets/Placeholder/Character/Run/Run-Sheet.png" id="3_aafh5"]
+[ext_resource type="FontFile" uid="uid://cyxtmtxf305gt" path="res://assets/Placeholder/Minecraft.ttf" id="4_6ud52"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pxh6c"]
+radius = 11.0
+height = 48.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1e7ej"]
+resource_local_to_scene = true
+shader = ExtResource("2_58etg")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0revy"]
+atlas = ExtResource("3_aafh5")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_du0wq"]
+atlas = ExtResource("3_aafh5")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g44k1"]
+atlas = ExtResource("3_aafh5")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5yf5"]
+atlas = ExtResource("3_aafh5")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcf0i"]
+atlas = ExtResource("3_aafh5")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqnor"]
+atlas = ExtResource("3_aafh5")
+region = Rect2(400, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r35w0"]
+atlas = ExtResource("3_aafh5")
+region = Rect2(480, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5c3c7"]
+atlas = ExtResource("3_aafh5")
+region = Rect2(560, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5wi72"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0revy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_du0wq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g44k1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5yf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcf0i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqnor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r35w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5c3c7")
+}],
+"loop": true,
+"name": &"run",
+"speed": 12.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6viwr"]
+font = ExtResource("4_6ud52")
+font_size = 25
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hl7l0"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_ahjtv"]
+font = ExtResource("4_6ud52")
+font_size = 20
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_75e0a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(3, 3)
+shape = SubResource("CapsuleShape2D_pxh6c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_1e7ej")
+position = Vector2(4, 0)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_5wi72")
+animation = &"run"
+autoplay = "run"
+flip_h = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-24.625, 1)
+scale = Vector2(0.8375, 7.2)
+rect = Rect2(-10, -10, 80, 20)
+
+[node name="EnemyUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -88.0
+offset_top = -148.0
+offset_right = 87.0
+offset_bottom = -78.0
+
+[node name="LevelLabel" type="Label" parent="EnemyUI"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 33.0
+offset_top = 37.0
+offset_right = 70.0
+offset_bottom = 70.0
+text = "30
+"
+label_settings = SubResource("LabelSettings_6viwr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="NameLabel" type="Label" parent="EnemyUI"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 13.0
+offset_right = 156.0
+offset_bottom = 37.0
+text = "pele'
+"
+label_settings = SubResource("LabelSettings_6viwr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Type" type="Control" parent="EnemyUI"]
+anchors_preset = 0
+offset_left = 73.0
+offset_top = 34.0
+offset_right = 138.0
+offset_bottom = 69.0
+
+[node name="TypePanel" type="Panel" parent="EnemyUI/Type"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hl7l0")
+
+[node name="TypeLabel" type="Label" parent="EnemyUI/Type"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 57.0
+offset_bottom = 43.0
+text = "TKN"
+label_settings = SubResource("LabelSettings_ahjtv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,0 +1,190 @@
+[gd_scene load_steps=15 format=3 uid="uid://c531hn71s0rxy"]
+
+[ext_resource type="FontFile" uid="uid://cyxtmtxf305gt" path="res://assets/Placeholder/Minecraft.ttf" id="1_hvrdc"]
+[ext_resource type="Script" path="res://scenes/scripts/dribblingCard.gd" id="1_hxcme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ti45f"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_hqjhm"]
+font = ExtResource("1_hvrdc")
+font_size = 26
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_06vhg"]
+font = ExtResource("1_hvrdc")
+font_size = 23
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f7uih"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_kam3e"]
+font = ExtResource("1_hvrdc")
+font_size = 45
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ej525"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_cuqbb"]
+font = ExtResource("1_hvrdc")
+font_size = 20
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8wv0"]
+bg_color = Color(0, 0, 0, 0)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fdrm0"]
+bg_color = Color(0, 0, 0, 0)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwmy8"]
+bg_color = Color(0, 0, 0, 0)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cgls2"]
+bg_color = Color(0, 0, 0, 0)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j83q0"]
+bg_color = Color(0, 0, 0, 0)
+anti_aliasing = false
+
+[node name="Panel" type="Control"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 300.0
+offset_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("1_hxcme")
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(0.6, 0.6, 0.6, 1)
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 100.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ti45f")
+
+[node name="NameLabel" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_top = 13.0
+offset_right = 199.0
+offset_bottom = 50.0
+text = "  ???"
+label_settings = SubResource("LabelSettings_hqjhm")
+vertical_alignment = 1
+
+[node name="XPLabel" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 83.0
+offset_top = 51.0
+offset_right = 158.0
+offset_bottom = 99.0
+text = "?? XP"
+label_settings = SubResource("LabelSettings_06vhg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Usage" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 220.0
+offset_top = 5.0
+offset_right = 306.0
+offset_bottom = 105.0
+mouse_filter = 2
+
+[node name="TypePanel" type="Panel" parent="Usage"]
+self_modulate = Color(1, 0.721569, 0.109804, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 72.0
+offset_bottom = 85.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_f7uih")
+
+[node name="UsagesLabel" type="Label" parent="Usage"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -10.0
+offset_top = 1.0
+offset_right = 90.0
+offset_bottom = 100.0
+text = "??"
+label_settings = SubResource("LabelSettings_kam3e")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 9.0
+offset_top = 51.0
+offset_right = 93.0
+offset_bottom = 91.0
+mouse_filter = 2
+
+[node name="TypePanel" type="Panel" parent="Type"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 64.0
+offset_bottom = 41.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ej525")
+
+[node name="TypeLabel" type="Label" parent="Type"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 7.0
+offset_top = -1.0
+offset_right = 55.0
+offset_bottom = 47.0
+text = "???"
+label_settings = SubResource("LabelSettings_cuqbb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_g8wv0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fdrm0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jwmy8")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cgls2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_j83q0")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

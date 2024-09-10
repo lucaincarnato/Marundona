@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://cn0blvwhti7qq"]
+
+[ext_resource type="FontFile" uid="uid://cyxtmtxf305gt" path="res://assets/Placeholder/Minecraft.ttf" id="1_wd5ep"]
+[ext_resource type="Texture2D" uid="uid://cah1l7tnw7fnc" path="res://assets/HUD/ballGrabber.png" id="2_dnugh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jbqi0"]
+bg_color = Color(0.423529, 0.67451, 0.894118, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_hb80k"]
+font = ExtResource("1_wd5ep")
+font_size = 50
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dv1eh"]
+bg_color = Color(1, 0.721569, 0.109804, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 6.0
+expand_margin_bottom = 6.0
+
+[node name="LevelSlider" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 358.0
+offset_bottom = 60.0
+
+[node name="TypePanel" type="Panel" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 370.0
+offset_bottom = 60.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jbqi0")
+
+[node name="LevelLabel" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 9.0
+offset_right = 92.0
+offset_bottom = 63.0
+text = "100"
+label_settings = SubResource("LabelSettings_hb80k")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelProgress" type="HSlider" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 99.0
+offset_top = 1.0
+offset_right = 355.0
+offset_bottom = 60.0
+theme_override_icons/grabber_disabled = ExtResource("2_dnugh")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_dv1eh")
+rounded = true
+editable = false
+scrollable = false

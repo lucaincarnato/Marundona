@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://dqfrrusvahihj"]
+
+[ext_resource type="Script" path="res://scenes/scripts/dribblingDemo.gd" id="1_03l2y"]
+[ext_resource type="Texture2D" uid="uid://y07rmjdvg50g" path="res://assets/ArtPlaceholder/fireball.png" id="1_weap0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qscs5"]
+radius = 9.4
+height = 28.3333
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cn0w"]
+atlas = ExtResource("1_weap0")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnqgi"]
+atlas = ExtResource("1_weap0")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khdnl"]
+atlas = ExtResource("1_weap0")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpdkw"]
+atlas = ExtResource("1_weap0")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_flfl6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cn0w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnqgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khdnl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpdkw")
+}],
+"loop": true,
+"name": &"movement",
+"speed": 12.0
+}]
+
+[node name="Dribbling" type="CharacterBody2D"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_03l2y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(27, 0)
+scale = Vector2(5, 6)
+shape = SubResource("CapsuleShape2D_qscs5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+texture_filter = 1
+position = Vector2(36, -2)
+sprite_frames = SubResource("SpriteFrames_flfl6")
+animation = &"movement"
+autoplay = "movement"
+frame_progress = 0.192091
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-8.25, -7.62939e-06)
+scale = Vector2(1.175, 8.5)
+rect = Rect2(-10, -10, 80, 20)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

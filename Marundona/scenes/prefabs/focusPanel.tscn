@@ -1,0 +1,517 @@
+[gd_scene load_steps=6 format=3 uid="uid://o5run724awne"]
+
+[ext_resource type="FontFile" uid="uid://cyxtmtxf305gt" path="res://assets/Placeholder/Minecraft.ttf" id="1_jqhno"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vsmmn"]
+bg_color = Color(0.12549, 0.12549, 0.12549, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_7ybae"]
+font = ExtResource("1_jqhno")
+font_size = 20
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1p6sm"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_1xyox"]
+font = ExtResource("1_jqhno")
+font_size = 20
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+
+[node name="FocusPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1140.0
+offset_bottom = -348.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.784314)
+texture_filter = 1
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 338.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vsmmn")
+
+[node name="WinsLabel" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 31.0
+offset_top = 67.0
+offset_right = 111.0
+offset_bottom = 96.0
+text = "wins on:"
+label_settings = SubResource("LabelSettings_7ybae")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Agg" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 51.0
+offset_right = 69.0
+offset_bottom = 322.0
+
+[node name="Type" type="Control" parent="Agg"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.5
+offset_top = -29.0
+offset_right = 97.5
+offset_bottom = 6.0
+
+[node name="TypePanel" type="Panel" parent="Agg/Type"]
+self_modulate = Color(1, 1, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p6sm")
+
+[node name="TypeLabel" type="Label" parent="Agg/Type"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 57.0
+offset_bottom = 43.0
+text = "AGG"
+label_settings = SubResource("LabelSettings_1xyox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Agg" type="Control" parent="Agg"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.5
+offset_top = 55.0
+offset_right = 97.5
+offset_bottom = 90.0
+
+[node name="TypePanel" type="Panel" parent="Agg/Agg"]
+self_modulate = Color(1, 1, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p6sm")
+
+[node name="TypeLabel" type="Label" parent="Agg/Agg"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 57.0
+offset_bottom = 43.0
+text = "AGG"
+label_settings = SubResource("LabelSettings_1xyox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tkn" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 51.0
+offset_right = 69.0
+offset_bottom = 322.0
+
+[node name="Type" type="Control" parent="Tkn"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.5
+offset_top = -29.0
+offset_right = 97.5
+offset_bottom = 6.0
+
+[node name="TypePanel" type="Panel" parent="Tkn/Type"]
+self_modulate = Color(1, 0, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p6sm")
+
+[node name="TypeLabel" type="Label" parent="Tkn/Type"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 57.0
+offset_bottom = 43.0
+text = "TKN"
+label_settings = SubResource("LabelSettings_1xyox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Agg" type="Control" parent="Tkn"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.5
+offset_top = 55.0
+offset_right = 97.5
+offset_bottom = 90.0
+
+[node name="TypePanel" type="Panel" parent="Tkn/Agg"]
+self_modulate = Color(1, 1, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p6sm")
+
+[node name="TypeLabel" type="Label" parent="Tkn/Agg"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 57.0
+offset_bottom = 43.0
+text = "AGG"
+label_settings = SubResource("LabelSettings_1xyox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tkn" type="Control" parent="Tkn"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.5
+offset_top = 110.0
+offset_right = 97.5
+offset_bottom = 145.0
+
+[node name="TypePanel" type="Panel" parent="Tkn/Tkn"]
+self_modulate = Color(1, 0, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p6sm")
+
+[node name="TypeLabel" type="Label" parent="Tkn/Tkn"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 57.0
+offset_bottom = 43.0
+text = "TKN"
+label_settings = SubResource("LabelSettings_1xyox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Int" type="Control" parent="Tkn"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.5
+offset_top = 165.0
+offset_right = 97.5
+offset_bottom = 200.0
+
+[node name="TypePanel" type="Panel" parent="Tkn/Int"]
+self_modulate = Color(0, 1, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p6sm")
+
+[node name="TypeLabel" type="Label" parent="Tkn/Int"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 57.0
+offset_bottom = 43.0
+text = "PHY"
+label_settings = SubResource("LabelSettings_1xyox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Int" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 51.0
+offset_right = 69.0
+offset_bottom = 322.0
+
+[node name="Type" type="Control" parent="Int"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.5
+offset_top = -29.0
+offset_right = 97.5
+offset_bottom = 6.0
+
+[node name="TypePanel" type="Panel" parent="Int/Type"]
+self_modulate = Color(0, 0, 1, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p6sm")
+
+[node name="TypeLabel" type="Label" parent="Int/Type"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 57.0
+offset_bottom = 43.0
+text = "INT"
+label_settings = SubResource("LabelSettings_1xyox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Agg" type="Control" parent="Int"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.5
+offset_top = 55.0
+offset_right = 97.5
+offset_bottom = 90.0
+
+[node name="TypePanel" type="Panel" parent="Int/Agg"]
+self_modulate = Color(1, 1, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p6sm")
+
+[node name="TypeLabel" type="Label" parent="Int/Agg"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 57.0
+offset_bottom = 43.0
+text = "AGG"
+label_settings = SubResource("LabelSettings_1xyox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tkn" type="Control" parent="Int"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.5
+offset_top = 110.0
+offset_right = 97.5
+offset_bottom = 145.0
+
+[node name="TypePanel" type="Panel" parent="Int/Tkn"]
+self_modulate = Color(1, 0, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p6sm")
+
+[node name="TypeLabel" type="Label" parent="Int/Tkn"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 57.0
+offset_bottom = 43.0
+text = "TKN"
+label_settings = SubResource("LabelSettings_1xyox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Int" type="Control" parent="Int"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.5
+offset_top = 165.0
+offset_right = 97.5
+offset_bottom = 200.0
+
+[node name="TypePanel" type="Panel" parent="Int/Int"]
+self_modulate = Color(0, 0, 1, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p6sm")
+
+[node name="TypeLabel" type="Label" parent="Int/Int"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 57.0
+offset_bottom = 43.0
+text = "INT"
+label_settings = SubResource("LabelSettings_1xyox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Phy" type="Control" parent="Int"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.5
+offset_top = 220.0
+offset_right = 97.5
+offset_bottom = 255.0
+
+[node name="TypePanel" type="Panel" parent="Int/Phy"]
+self_modulate = Color(0, 1, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p6sm")
+
+[node name="TypeLabel" type="Label" parent="Int/Phy"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 57.0
+offset_bottom = 43.0
+text = "PHY"
+label_settings = SubResource("LabelSettings_1xyox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Phy" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 51.0
+offset_right = 69.0
+offset_bottom = 322.0
+
+[node name="Type" type="Control" parent="Phy"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.5
+offset_top = -29.0
+offset_right = 97.5
+offset_bottom = 6.0
+
+[node name="TypePanel" type="Panel" parent="Phy/Type"]
+self_modulate = Color(0, 1, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p6sm")
+
+[node name="TypeLabel" type="Label" parent="Phy/Type"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 57.0
+offset_bottom = 43.0
+text = "PHY"
+label_settings = SubResource("LabelSettings_1xyox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Agg" type="Control" parent="Phy"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.5
+offset_top = 55.0
+offset_right = 97.5
+offset_bottom = 90.0
+
+[node name="TypePanel" type="Panel" parent="Phy/Agg"]
+self_modulate = Color(1, 1, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p6sm")
+
+[node name="TypeLabel" type="Label" parent="Phy/Agg"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 57.0
+offset_bottom = 43.0
+text = "AGG"
+label_settings = SubResource("LabelSettings_1xyox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tkn" type="Control" parent="Phy"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.5
+offset_top = 110.0
+offset_right = 97.5
+offset_bottom = 145.0
+
+[node name="TypePanel" type="Panel" parent="Phy/Tkn"]
+self_modulate = Color(0, 1, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 34.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1p6sm")
+
+[node name="TypeLabel" type="Label" parent="Phy/Tkn"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = -5.0
+offset_right = 57.0
+offset_bottom = 43.0
+text = "PHY"
+label_settings = SubResource("LabelSettings_1xyox")
+horizontal_alignment = 1
+vertical_alignment = 1

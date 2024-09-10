@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Database" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/Database.gd" id="1_1hs1y"]
+
+[resource]
+script = ExtResource("1_1hs1y")
+highScore = 45
+bribes = 3
+lastBribesUpdate = 1.72079e+09
+enemiesName = PackedStringArray("ZIDANE", "SUAREZ", "MALDINI", "TOTTI", "KOULIBALY", "LUKAKU", "HAALAND", "RONALDINHO", "DEL PIERO", "MBAPPE", "RONALDO", "MESSI", "IBRAHIMOVIC", "PELE")
+enemiesRarity = PackedInt32Array(0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 3)
+enemiesType = PackedStringArray("AGG", "AGG", "PHY", "PHY", "PHY", "PHY", "AGG", "TKN", "TKN", "PHY", "PHY", "INT", "INT", "TKN")
+dribbledEnemies = PackedInt32Array(2, 4, 7, 9, 12)
+dribblingsObtained = PackedInt32Array(0, 1, 2, 3)
+dribblingsName = PackedStringArray("Breakthrough", "Step Over", "Sombrero", "Body Feint", "Shot Cancel", "Roulette", "Roll Drag", "Elastico", "Ronaldo Chop", "Rainbow", "Heel to Heel", "Nutmeg", "Mano de Dios")
+dribblingsType = PackedStringArray("AGG", "PHY", "TKN", "INT", "AGG", "PHY", "TKN", "INT", "AGG", "PHY", "TKN", "INT", "SUP")
+dribblingsUses = PackedInt32Array(8, 5, 4, 2, 10, 5, 6, 2, 10, 8, 6, 2, 1)
+dribblingsPoints = PackedInt32Array(10, 15, 15, 20, 12, 20, 15, 30, 15, 20, 17, 40, 0)
+dribblingsHighScore = PackedInt32Array(0, 0, 0, 0, 200, 600, 1000, 1500, 2000, 3500, 5000, 7500, 10000)

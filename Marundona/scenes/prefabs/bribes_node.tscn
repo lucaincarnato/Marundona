@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dic5wtdawthb4"]
+
+[ext_resource type="Script" path="res://scenes/scripts/BribesManager.gd" id="1_axw82"]
+[ext_resource type="Texture2D" uid="uid://c8bhicwi70e6r" path="res://assets/HUD/bribe.png" id="2_6dtfc"]
+[ext_resource type="FontFile" uid="uid://cyxtmtxf305gt" path="res://assets/Placeholder/Minecraft.ttf" id="3_tvaxn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_phdaa"]
+font = ExtResource("3_tvaxn")
+font_size = 50
+outline_size = 18
+outline_color = Color(0, 0, 0, 1)
+
+[node name="BribesNode" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 113.0
+offset_bottom = 63.0
+script = ExtResource("1_axw82")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(78, 30)
+scale = Vector2(3, 3)
+texture = ExtResource("2_6dtfc")
+
+[node name="BribesText" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 55.0
+offset_bottom = 61.0
+text = "3"
+label_settings = SubResource("LabelSettings_phdaa")
+horizontal_alignment = 1
+vertical_alignment = 2
