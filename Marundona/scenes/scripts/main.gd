@@ -10,7 +10,7 @@ var savedData = load("res://resources/Database.tres")
 	
 # Setting up the scene: not in pause, marundona in idle, ground stopped
 func _ready():
-	get_node("CroudCheer").play()
+	# get_node("CroudCheer").play()
 	savedData.load_data()
 	get_tree().paused = false 
 	get_node("GameObjects/SpawnTimer").set_paused(true)
@@ -92,4 +92,3 @@ func _on_start_button_pressed():
 	$HUD.show()
 	player.marundona.set_animation("run")
 	ground.play()
-
