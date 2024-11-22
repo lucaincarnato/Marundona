@@ -4,13 +4,13 @@
 
 [resource]
 script = ExtResource("1_1hs1y")
-highScore = 45
-bribes = 3
-lastBribesUpdate = 1.72079e+09
+highScore = 158
+bribes = 2
+lastBribesUpdate = 1.7321e+09
 enemiesName = PackedStringArray("ZIDANE", "SUAREZ", "MALDINI", "TOTTI", "KOULIBALY", "LUKAKU", "HAALAND", "RONALDINHO", "DEL PIERO", "MBAPPE", "RONALDO", "MESSI", "IBRAHIMOVIC", "PELE")
 enemiesRarity = PackedInt32Array(0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 3)
 enemiesType = PackedStringArray("AGG", "AGG", "PHY", "PHY", "PHY", "PHY", "AGG", "TKN", "TKN", "PHY", "PHY", "INT", "INT", "TKN")
-dribbledEnemies = PackedInt32Array(2, 4, 7, 9, 12)
+dribbledEnemies = PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12)
 dribblingsObtained = PackedInt32Array(0, 1, 2, 3)
 dribblingsName = PackedStringArray("Breakthrough", "Step Over", "Sombrero", "Body Feint", "Shot Cancel", "Roulette", "Roll Drag", "Elastico", "Ronaldo Chop", "Rainbow", "Heel to Heel", "Nutmeg", "Mano de Dios")
 dribblingsType = PackedStringArray("AGG", "PHY", "TKN", "INT", "AGG", "PHY", "TKN", "INT", "AGG", "PHY", "TKN", "INT", "SUP")
